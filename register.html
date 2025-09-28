@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register • Social App</title>
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="feed.html">Social App</a>
+      <a href="feed.html">Feed</a>
+      <a href="profile.html">My Profile</a>
+      <span class="spacer"></span>
+      <a id="navLogin" href="login.html">Login</a>
+      <a id="navRegister" href="register.html">Register</a>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1>Register</h1>
+    <form id="registerForm" class="stack" autocomplete="off">
+      <label>Name
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required
+          pattern="^[\\w.+-]+@(?:stud\\.)?noroff\\.no$"
+          title="Use your @noroff.no or @stud.noroff.no email" />
+      </label>
+      <label>Password
+        <input type="password" name="password" required minlength="8" />
+      </label>
+      <button class="btn primary" type="submit">Create account</button>
+      <output id="registerMsg" class="msg" role="status" aria-live="polite"></output>
+      <p class="muted">Have an account? <a href="login.html">Login</a></p>
+    </form>
+  </main>
+
+  <script type="module" src="src/pages/register.js"></script>
+</body>
+</html>

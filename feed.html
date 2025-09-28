@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feed • Social App</title>
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="feed.html">Social App</a>
+    <a href="feed.html">Feed</a>
+    <a href="profile.html">My Profile</a>
+    <span class="spacer"></span>
+    <a id="navLogin" href="login.html">Login</a>
+    <a id="navRegister" href="register.html">Register</a>
+    <button id="logoutBtn" class="btn">Logout</button>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Create post</h2>
+    <form id="createPostForm" class="stack" autocomplete="off">
+      <label>Title <input name="title" required /></label>
+      <label>Body <textarea name="body" rows="3" required></textarea></label>
+      <label>Media URL (optional) <input name="media" type="url" placeholder="https://..." /></label>
+      <button class="btn primary" type="submit">Post</button>
+      <output id="createMsg" class="msg" role="status" aria-live="polite"></output>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Search & Filters</h2>
+    <div class="grid-2">
+      <input id="searchInput" type="search" placeholder="Search posts" />
+      <select id="sortSelect">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+      </select>
+    </div>
+  </section>
+
+  <output id="feedMsg" class="msg" role="status" aria-live="polite"></output>
+  <section id="feedSkeleton" class="stack hidden">
+    <div class="card skeleton"></div>
+    <div class="card skeleton"></div>
+    <div class="card skeleton"></div>
+  </section>
+  <section id="feed" class="stack"></section>
+
+  <div class="center">
+    <button id="loadMoreBtn" class="btn">Load more</button>
+  </div>
+</main>
+
+<script type="module" src="src/pages/feed.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post • Social App</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/feed.html">Social App</a>
+      <a href="/feed.html">Feed</a>
+      <a href="/profile.html">My Profile</a>
+      <span class="spacer"></span>
+      <a id="navLogin" href="/login.html">Login</a>
+      <a id="navRegister" href="/register.html">Register</a>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- status/error messages -->
+    <output id="postMsg" class="msg"></output>
+
+    <!-- post content -->
+    <article id="post" class="card"></article>
+
+    <!-- owner-only actions -->
+    <section id="ownerActions" class="hstack hidden">
+      <button id="editBtn" class="btn">Edit</button>
+      <button id="deleteBtn" class="btn danger">Delete</button>
+    </section>
+
+    <!-- OPTIONAL (pair extras) -->
+    <section id="extras" class="grid-2">
+      <div id="reactions" class="card">
+        <h3>Reactions</h3>
+        <div id="reactionBar" class="hstack wrap"></div>
+      </div>
+      <div id="comments" class="card">
+        <h3>Comments</h3>
+        <form id="commentForm" class="hstack">
+          <input type="text" name="comment" placeholder="Write a comment…" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <ul id="commentList" class="stack"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- tiny toast for feedback -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script type="module" src="/src/pages/post.js"></script>
+</body>
+</html>

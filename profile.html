@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile • Social App</title>
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="feed.html">Social App</a>
+      <a href="feed.html">Feed</a>
+      <a href="profile.html">My Profile</a>
+      <span class="spacer"></span>
+      <a id="navLogin" href="login.html">Login</a>
+      <a id="navRegister" href="register.html">Register</a>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="profileHeader" class="card"></section>
+    <section class="card" id="avatarUpdater">
+      <h3>Update avatar</h3>
+      <form id="avatarForm" class="hstack">
+        <input type="url" name="avatar" placeholder="https://example.com/avatar.jpg" required />
+        <button class="btn primary" type="submit">Save</button>
+        <output id="avatarMsg" class="msg" role="status" aria-live="polite"></output>
+      </form>
+    </section>
+
+    <section>
+      <h3>Posts</h3>
+      <div id="userPosts" class="stack"></div>
+      <div class="center">
+        <button id="loadMoreUserPosts" class="btn">Load more</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/pages/profile.js"></script>
+</body>
+</html>
