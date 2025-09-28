@@ -99,3 +99,14 @@ export async function updatePost(id, input) {
   });
   return res.data ?? res;
 }
+/**
+ * Delete a post by id.
+ * @param {string|number} id
+ * @returns {Promise<any>}
+ */
+export async function deletePost(id) {
+  const res = await apiFetch(`${BASE}/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+  });
+  return res.data ?? res;
+}
