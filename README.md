@@ -56,3 +56,18 @@ cd js2-social-app
 ### 2. Open in browser
 No build step is required — just open `index.html` in your browser  
 (or serve with Live Server in VS Code).
+## References & Acknowledgements
+
+During the development of this project I consulted several resources:
+
+- **Books**
+  - *JavaScript: The Definitive Guide* (David Flanagan) – for deep understanding of JavaScript syntax, ES6 modules, and debugging practices.
+  - *HTML & CSS: Design and Build Websites* (Jon Duckett) – for HTML structure and styling fundamentals.
+
+- **Documentation**
+  - [Noroff API Documentation](https://docs.noroff.dev/docs/v2) – for authentication, posts, and profiles endpoints.
+  - [MDN Web Docs](https://developer.mozilla.org/) – for JavaScript language features, `fetch`, and DOM APIs.
+  - [Tailwind CSS Documentation](https://tailwindcss.com/docs) – for styling reference and utility classes.
+
+- **AI Assistance**
+  - AI – used as a guide for setting up login logic, structuring upload functionality, and clarifying Tailwind usage.  All final design and implementation decisions were my own.
